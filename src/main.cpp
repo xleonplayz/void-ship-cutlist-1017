@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cctype>
 #include <iostream>
 #include <iterator>
 #include <sstream>
@@ -10,8 +11,8 @@
 #include <unistd.h>
 #endif
 
-const unsigned RELEASE = 1;
-const unsigned KERF = 0;
+const unsigned RELEASE = 2;
+const unsigned KERF = 3;
 
 std::string failure(const std::string &message) {
     return "{\"ok\":false,\"error\":\"" + message + "\",\"release\":" + std::to_string(RELEASE) + "}";

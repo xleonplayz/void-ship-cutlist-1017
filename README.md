@@ -19,5 +19,7 @@ POST `/plan`, Content-Type text/plain, body `6000\n1200,1800,2400` does the same
 Rejects oversized pieces, invalid integers, incomplete lists and >100 pieces.
 `/health` identifies the service and release. The service is intentionally public.
 
-Release 1 ignores kerf. Release 2 will allow 3 mm per requested piece, including
+Release 1 ignores kerf. Release 2 allows 3 mm per requested piece, including
 the last cut on each stock bar; the first example then has 591 mm waste.
+The exact-fit example now needs three bars and leaves 5988 mm waste; this change
+is deliberate and provides a visible release/rollback check.
